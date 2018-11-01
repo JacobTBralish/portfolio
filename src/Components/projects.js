@@ -1,8 +1,10 @@
 import React from 'react';
 import ProjectView from './ProjectView';
-import { Link } from 'react-router-dom';
 
 import SherpaHome from '../SherpaImages/Home.png'
+import SherpaState from '../SherpaImages/States.png'
+import SherpaTrails from '../SherpaImages/Trails.png'
+import SherpaTrailView from '../SherpaImages/TrailView.png'
 
 
 const Projects = () => {
@@ -15,7 +17,9 @@ const Projects = () => {
             <h3 className='projectLowerHeader'>Projects:</h3>
             </div>
             <div>
-                <Link to='/projects/'><ProjectView image1={SherpaHome} body={"Example1"} title={'Sherpa-Hiking'} /></Link>
+               <ProjectView id={1} image1={SherpaHome} image2={SherpaState} image3={SherpaTrails} image4={SherpaTrailView} body={"Example1"} title={'Sherpa-Hiking'} />
+
+               {/* <ProjectView id={2} image1={SherpaHome} body={"Example1"} title={'test 2'} /> */}
                 {/* <ProjectView image1={} image2={} image3={} image4={} body={"Example1"} /> */}
             </div>
 

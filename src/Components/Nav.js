@@ -10,14 +10,14 @@ const Nav = () => {
     </Link>
         <ul className='navList'>
             <li className='navListItem'><Link to='/'>Home</Link></li>
-            <li className='navListItem'><Link to='/experience'>Experience</Link></li>
-            {/* <li className='socialLinkParent'> */}
-                <ul className='navListItemSocial'>Social
+            <li className='navListItem'><Link to='/projects'>Projects</Link></li>
+            <li className='socialLinkParent'>
+                <ul id='navListItemSocial'>Social
                     <li className='socialLinkImage'><a href='https://github.com/JacobTBralish'><i className="fab fa-github-square"></i></a></li>
                     <li className='socialLinkImage'><a href='https://www.linkedin.com/in/jacobbralish/'><i className="fab fa-linkedin"></i></a></li>
                     {/* <li></li> */}
                 </ul>
-            {/* </li> */}
+            </li>
         </ul>
     </div> );
 }

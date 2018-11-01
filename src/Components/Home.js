@@ -1,5 +1,5 @@
 import React from 'react';
-import MainPhoto from '../Images/weddinginvitationphoto.jpg';
+import MainPhoto from '../Images/JacobsPhoto.png';
 import './style.scss';
 
 

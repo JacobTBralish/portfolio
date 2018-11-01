@@ -57,11 +57,17 @@ $reactBlue: #61DAFB;
             }
 
             .navList {
-                .navListItemSocial {
+
+                #navListItemSocial {
                     // line-height: 1em;
                     margin: 8px;
                     cursor: pointer;
 
+                    & :hover {
+                        color: $reactBlue;
+                    }
+                
+                
                     .socialLinkImage {
                         opacity: 0;
                         visibility: hidden;
@@ -77,13 +83,14 @@ $reactBlue: #61DAFB;
                         font-weight: bold;
                         margin: 0;
                         text-align: center;
-                        color: $offBlack;
+                        // color: $offBlack;
                         transition: all ease-out .3s;      
 
                         & a {
                             margin: 0 10px;
                             line-height: 72.5px;
                             color: $reactBlue;
+
                         }
                     }
                 }
@@ -91,8 +98,11 @@ $reactBlue: #61DAFB;
 
             .navList {
                 display: flex;
+                
+                
 
                 .navListItem {
+                    
                     // display: inline-block;
                     margin: 8px;
 
@@ -103,14 +113,14 @@ $reactBlue: #61DAFB;
                     
                     & a {
                         text-decoration: none;
-                        color: black;
+                        color: $offBlack;
 
                     }
                 }
             }
 
-            .navListItemSocial:hover .socialLinkImage {
-                color: $reactBlue;
+            #navListItemSocial:hover .socialLinkImage {
+
                 cursor: pointer;
                 visibility: visible;
                 width: 40px;
@@ -119,6 +129,7 @@ $reactBlue: #61DAFB;
             }
         }
     }
+
 
 
         .emailSubContainer {
@@ -210,7 +221,7 @@ $reactBlue: #61DAFB;
         max-width: 1450px;
 
        .mainPhotoSubContainer {
-           height: 450px;
+        //    height: 450px;
         //    width: 90vw;
             text-align: center;
             margin: auto 0px;;
@@ -232,6 +243,7 @@ $reactBlue: #61DAFB;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 4em;
+        margin-top: 4em;
         font-size: 100%;
         font-family: 'adriane', Georgia, serif;
         color: $offBlack;
@@ -278,6 +290,10 @@ $reactBlue: #61DAFB;
 
             }
         }
+
+        // .aboutContainer {
+        //     padding-top: 2%;
+        // }
     }
 }
 
@@ -320,6 +336,8 @@ $reactBlue: #61DAFB;
     padding-top: 6em;
     padding-bottom: 1em;
     border-top: 1px solid #f0eeee;
+    padding-left: 2em;
+    padding-right: 2em;
 
     .projectViewSubContainer {
         padding-top: 3em;
