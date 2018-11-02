@@ -271,9 +271,10 @@ $reactBlue: #61DAFB;
             text-transform: uppercase;
             font-family: 'franklin-gothic-urw-cond', Arial, sans-serif;
             font-weight: 700;
+            // font-family: 20px!important;
         }
 
-        & p {
+        & .aboutMeP {
             display: block;
             margin-block-start: 1em;
             margin-block-end: 1em;
