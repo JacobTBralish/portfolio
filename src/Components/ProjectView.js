@@ -10,6 +10,7 @@ const ProjectView = (props) => {
         <div className='projectViewContainer'>
          {/* <Link to={`/projects/${props.id}`}> */}
             <section className='projectViewSubContainer'>
+                <a href={`www.${props.title}.com`}><h1>{props.title}</h1></a>
             <Carousel autoPlay showArrows={true} showThumbs={true} infiniteLoop={true}>
                 <div>
                     <img className='projectImage' src={props.image1} alt='' />
@@ -27,9 +28,21 @@ const ProjectView = (props) => {
                     <img className='projectImage' src={props.image4} alt='' />
                     <p className='legend'>Trail Page</p>
                 </div>
+                {/* {props.image5 ?
+                <div>
+                    <img className='projectImage' src={props.image5} alt='' />
+                    <p className='legend'>Trail Page</p>
+                </div>
+                : null}
+                {props.image6 ?
+                <div>
+                    <img className='projectImage' src={props.image6} alt='' />
+                    <p className='legend'>Trail Page</p>
+                </div>
+                : null} */}
+
             </Carousel>
-                <p className='projectBody'> Details</p>
-                <h3>{props.title}</h3>
+                <p className='projectBody'>{props.body}</p>
             </section>
             {/* </Link> */}
         </div>

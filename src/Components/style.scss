@@ -18,6 +18,9 @@ $reactBlue: #61DAFB;
         height: 143px;
 
 
+        @media(max-width:375px) {
+            height: 80px;
+        }
 
         .navSubContainer {
             display: flex;
@@ -27,6 +30,31 @@ $reactBlue: #61DAFB;
             margin-right: 70px;
             margin-left: 30px;
             color: $offBlack;
+
+
+            //hides and displays bitton when shown
+            & button {
+                display: none;
+
+                @media(max-width:375px) {
+                    display: initial;
+                    position: absolute;
+                    z-index: 1;
+                    height: 60px;
+                    width: 60px;
+                    font-size: 24px;
+                    border-radius: 50%;
+                    // bottom: 30px;
+                    right: 0px;
+                    background: none;
+                    border: none;
+                    top: 10px;
+                }
+                 
+
+            }
+    // .navSubContainer button {
+            // }
 
             .jLink {
                 text-decoration: none!important;
@@ -75,7 +103,7 @@ $reactBlue: #61DAFB;
                         // line-height: 72.5px;
                         font-size: 1.5em;
                         line-height: 1em;
-                        float: left;
+                        float: right;
                         margin-left: 1.5em;
                         list-style: none;
                         // margin-bottom: 1.5em;
@@ -99,7 +127,12 @@ $reactBlue: #61DAFB;
             .navList {
                 display: flex;
                 
+                // @media(max-width:1200px) {
+                //     padding-top: 1.5em;
+                //     padding-bottom: 1.5em; 
                 
+
+                // }
 
                 .navListItem {
                     
@@ -128,6 +161,48 @@ $reactBlue: #61DAFB;
                 opacity: 1;    
             }
         }
+
+        .navSubContainer nav {
+
+            //hides nav when at this width
+            @media(max-width:375px) {
+                // display: none;
+
+                position: fixed;
+                /* if you were coming from top it would be top instead of bottom */
+                top: 0;
+                right: 0;
+                background: $reactBlue;
+                transform: translate(0px, -700px);
+                transition: 1s;
+                
+                & .navList {
+                    height: 37vh;
+                    width: 100vw;
+                    flex-direction: column;
+                    padding: 10px 0;
+
+
+                    
+                    & .navListItem {
+                        width: 100vw;
+
+                        & :hover {
+                            color: $offBlack;
+                        }
+                    }
+                    & #navListItemSocial .socialLinkImage a {
+                        color: $offBlack;
+                    }
+                    
+
+                }
+            }
+        }
+
+        .navSubContainer .show {
+            transform: translate(0px, 0px)
+            }
     }
 
 
@@ -146,6 +221,15 @@ $reactBlue: #61DAFB;
                 margin: 0;
                 margin-block-start: 0.83em;
                 margin-block-end: 0.83em;
+
+
+            @media(max-width:1200px) {
+                font-size: 1.5em;
+
+                @media(max-width:375px) {
+                    font-size: 1em;
+                }
+            }
             }
 
             .emailMeButton {
@@ -160,6 +244,16 @@ $reactBlue: #61DAFB;
                 min-width: 10em;
                 transition: all 0.25s ease;
                 cursor: pointer;
+
+                @media(max-width:1200px) {
+                    padding: 1em 1.5em;
+    
+                    @media(max-width:375px) {
+                        padding: .3em .8em;
+                        background: none;
+                        font-size: 1em
+                    }
+                }
                 
                 
                 & a {
@@ -184,6 +278,18 @@ $reactBlue: #61DAFB;
                 font-size: 1.5em;
                 line-height: 2em;
                 margin-bottom: 1.5em;
+
+                @media(max-width:1200px) {
+                    font-size: 1em;
+                    line-height: 2em;
+                    margin-bottom: 1.5em;
+    
+                    @media(max-width:375px) {
+                        font-size: .8em;
+                        line-height: 1em;
+                        margin-bottom: .5em;
+                    }
+                }
             }
         }
 }
@@ -201,6 +307,16 @@ $reactBlue: #61DAFB;
         margin-left: auto;
         margin-right: auto;
 
+        @media(max-width:1200px) {
+            padding-top: 1.5em;
+            padding-bottom: 1.5em; 
+
+            @media(max-width:375px) {
+                padding-top: .5em;
+                padding-bottom: .5em; 
+            }
+        }
+
         .header {
             font-size: 3em;
             line-height: 1.5em;
@@ -208,6 +324,13 @@ $reactBlue: #61DAFB;
             font-weight: bold;
             margin: 0;
 
+            @media(max-width:1200px) {
+                font-size: 2em;
+
+                @media(max-width:375px) {
+                    font-size: 1em;
+                }
+            }
 
         }
     }
@@ -219,6 +342,14 @@ $reactBlue: #61DAFB;
         padding-left: 2em;
         padding-right: 2em;
         max-width: 1450px;
+
+        @media(max-width:375px) {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
 
        .mainPhotoSubContainer {
         //    height: 450px;
@@ -232,6 +363,10 @@ $reactBlue: #61DAFB;
             width: 80%;
             margin-left: auto;
             margin-right: auto;
+
+            @media(max-width:375px) {
+                width: 100%;
+            }
           
 
         }
@@ -261,6 +396,17 @@ $reactBlue: #61DAFB;
             font-size: 2em;
             line-height: 1em;
             margin-bottom: 1.5em;
+            padding-left: 2em;
+            padding-right: 2em;
+
+
+            @media(max-width:1200px) {
+                font-size: 1.5em;
+
+                @media(max-width:375px) {
+                    font-size: .9em;
+                }
+            }
         }
 
         & h4 {
@@ -272,6 +418,14 @@ $reactBlue: #61DAFB;
             font-family: 'franklin-gothic-urw-cond', Arial, sans-serif;
             font-weight: 700;
             // font-family: 20px!important;
+
+            @media(max-width:1200px) {
+                font-size: .85em;
+
+                @media(max-width:375px) {
+                    font-size: .40em;
+                }
+            }
         }
 
         & .aboutMeP {
@@ -283,6 +437,17 @@ $reactBlue: #61DAFB;
             font-family: 'adriane', Georgia, serif;
             color: $offBlack;
             -webkit-font-smoothing: antialiased;
+            padding-left: 2em;
+            padding-right: 2em;
+
+
+            @media(max-width:1200px) {
+                font-size: 18px;
+
+                @media(max-width:375px) {
+                    font-size: 13px;
+                }
+            }
 
             .textLink {
 
@@ -292,9 +457,7 @@ $reactBlue: #61DAFB;
             }
         }
 
-        // .aboutContainer {
-        //     padding-top: 2%;
-        // }
+ 
     }
 }
 
@@ -308,11 +471,31 @@ $reactBlue: #61DAFB;
         max-width: 80em;
         margin-left: auto;
         margin-right: auto;
+        font-weight: bold;
+
+        @media(max-width:1200px) {
+            padding-top: 1.5em;
+            padding-bottom: 1.5em; 
+
+            @media(max-width:375px) {
+                padding-top: .5em;
+                padding-bottom: .5em; 
+            }
+        }
+
 
         .projectTopHeader {
             font-size: 3em;
             line-height: 1.5em;
             margin-bottom: 1em;
+
+            @media(max-width:1200px) {
+                font-size: 2em;
+
+                @media(max-width:375px) {
+                    font-size: 1em;
+                }
+            }
 
             // font-size: 62.5%;
             font-family: 'adriane', Georgia, serif;
@@ -328,6 +511,13 @@ $reactBlue: #61DAFB;
             line-height: 1em;
             margin-bottom: 1.5em;
 
+            @media(max-width:1200px) {
+                font-size: 1.5em;
+
+                @media(max-width:375px) {
+                    font-size: 1em;
+                }
+            }
             
         }
     }
