@@ -12,6 +12,9 @@ $reactBlue: #61DAFB;
     font-family: 'adriane', Georgia, serif;
     color: $offBlack;
     -webkit-font-smoothing: antialiased;
+    @media(max-width: 414px){
+        padding: 10px 0;
+    }
 
     .navContainer {
         width: 100vw;
@@ -30,6 +33,10 @@ $reactBlue: #61DAFB;
             margin-right: 70px;
             margin-left: 30px;
             color: $offBlack;
+            @media(max-width: 435px){
+                margin-right: 30px;
+                margin-left: 30px;
+            }
 
 
             //hides and displays bitton when shown
@@ -87,7 +94,6 @@ $reactBlue: #61DAFB;
             .navList {
 
                 #navListItemSocial {
-                    // line-height: 1em;
                     margin: 8px;
                     cursor: pointer;
 
@@ -100,18 +106,14 @@ $reactBlue: #61DAFB;
                         opacity: 0;
                         visibility: hidden;
                         width: 0;
-                        // line-height: 72.5px;
                         font-size: 1.5em;
                         line-height: 1em;
                         float: right;
                         margin-left: 1.5em;
                         list-style: none;
-                        // margin-bottom: 1.5em;
-                        // padding-bottom: 2em;
                         font-weight: bold;
                         margin: 0;
                         text-align: center;
-                        // color: $offBlack;
                         transition: all ease-out .3s;      
 
                         & a {
@@ -126,17 +128,8 @@ $reactBlue: #61DAFB;
 
             .navList {
                 display: flex;
-                
-                // @media(max-width:1200px) {
-                //     padding-top: 1.5em;
-                //     padding-bottom: 1.5em; 
-                
-
-                // }
 
                 .navListItem {
-                    
-                    // display: inline-block;
                     margin: 8px;
 
                     & :hover {
@@ -166,10 +159,7 @@ $reactBlue: #61DAFB;
 
             //hides nav when at this width
             @media(max-width:435px) {
-                // display: none;
-
                 position: fixed;
-                /* if you were coming from top it would be top instead of bottom */
                 top: 0;
                 right: 0;
                 background: $reactBlue;
@@ -177,12 +167,10 @@ $reactBlue: #61DAFB;
                 transition: 1s;
                 
                 & .navList {
-                    height: 37vh;
+                    height: 42.8vh;
                     width: 100vw;
                     flex-direction: column;
                     padding: 10px 0;
-
-
                     
                     & .navListItem {
                         width: 100vw;
@@ -194,8 +182,6 @@ $reactBlue: #61DAFB;
                     & #navListItemSocial .socialLinkImage a {
                         color: $offBlack;
                     }
-                    
-
                 }
             }
         }
@@ -204,8 +190,6 @@ $reactBlue: #61DAFB;
             transform: translate(0px, 0px)
             }
     }
-
-
 
         .emailSubContainer {
             text-align: center;
@@ -223,13 +207,13 @@ $reactBlue: #61DAFB;
                 margin-block-end: 0.83em;
 
 
-            @media(max-width:1200px) {
-                font-size: 1.5em;
+                @media(max-width:1200px) {
+                    font-size: 1.5em;
 
-                @media(max-width:435px) {
-                    font-size: 1em;
+                    @media(max-width:435px) {
+                        font-size: 1em;
+                    }
                 }
-            }
             }
 
             .emailMeButton {
@@ -247,11 +231,21 @@ $reactBlue: #61DAFB;
 
                 @media(max-width:1200px) {
                     padding: 1em 1.5em;
-    
-                    @media(max-width:435px) {
-                        padding: .3em .8em;
+
+                    @media(max-width: 1050px){
+                        padding: .8em 1.3em;
                         background: none;
-                        font-size: 1em
+                        font-size: 1.3em;
+                        @media(max-width: 850px){
+                            padding: .55em 1em;
+                            background: none;
+                            font-size: 1.15em;
+                            @media(max-width:435px) {
+                                padding: .3em .8em;
+                                background: none;
+                                font-size: 1em;
+                            }
+                        }
                     }
                 }
                 
@@ -259,7 +253,6 @@ $reactBlue: #61DAFB;
                 & a {
                     text-decoration: none;
                     color: $offBlack;
-                    
                 }
             }
         }
@@ -515,40 +508,11 @@ $reactBlue: #61DAFB;
                 font-size: 1.5em;
 
                 @media(max-width:435px) {
+                    margin-left: 15px;
                     font-size: 1em;
                 }
             }
             
-        }
-    }
-}
-
-.projectViewContainer {
-    padding-top: 6em;
-    padding-bottom: 1em;
-    border-top: 1px solid #f0eeee;
-    padding-left: 2em;
-    padding-right: 2em;
-
-    .projectViewSubContainer {
-        padding-top: 3em;
-        padding-bottom: 1em;
-
-        .projectImage {
-            width: 85%;
-            // opacity: 0;
-            // position: absolute;
-            // background-color: #494c4e;
-            // top: 0;
-            // width: 100%;
-            // height: 100%;
-            // z-index: 2;
-            // color: #494c4e;
-            // text-decoration: none;
-            // margin-bottom: 1.25em;
-
-
-
         }
     }
 }

@@ -18,19 +18,9 @@ const Home = () => {
                 <div>
                     <h3>About:</h3>
                     <p className='aboutMeP'>
-                        I'm born and raised in Colorado, I love programming, reading, outdoor activities and lifting heavy things. {/* Testing my mind and body are two of the things I enjoy most. */} When I'm not doing any of those things, I'm spending time with my wifes, Alex, and my cocker spaniel named Arnold. Before becoming a full stack web developer, I was a personal trainer.
-                        
-                        {/* I am currently seeking employment oppotunities in enviornments suitable for consistent growth and somewhere my skills and knowledge can be and create impactful products. You can see my previous work history on my <a className='textLink' href='https://www.linkedin.com/in/jacobbralish/'>LinkedIn</a>.  */}
+                        I was born and raised in Colorado and am based in the greater Denver area. Outside of programming somethings I love to engage in are reading, outdoor activities and lifting heavy things in the gym. When I'm not doing any of those things, I'm spending time with my wife, Alex, and my cocker spaniel named Arnold. My goal is to create and build meaningful products that will be just as innovative as they are useful. I am looking for employment in an enviornment that is suitable to expand on current knowledge and gain new skills to be successful in programming, and also be a positive influence on my workplace and my peers.
                     </p>
-
-                    {/* <h3>More Stuff</h3>
-
-                    <h4>Stuff Header</h4>
-
-                    <p>
-                        and more partying
-                    </p> */}
-                </div>
+                 </div>
             </section>
  
         </div>

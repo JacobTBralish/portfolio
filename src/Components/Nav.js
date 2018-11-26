@@ -3,15 +3,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './style.scss';
 
-// const Nav = () => {
-
-//     return ( 
-
-//     );
-// }
- 
-// export default Nav;
-
 class Nav extends Component {
     constructor(props) {
         super(props);
@@ -19,6 +10,28 @@ class Nav extends Component {
             toggle: false
          }
     }
+
+    componentWillMount() {
+        window.addEventListener('mousedown', this.handleClick, false)
+    }
+
+    componentWillUnmount(){
+        window.removeEventListener('mousedown', this.handleClick, false)
+    }
+    
+    handleClickOutside = () => {
+        this.setState({
+            toggle: false
+        })
+    }
+
+    handleClick = (e) => {
+        if (this.node.contains(e.target)) {
+            return;
+        }
+        this.handleClickOutside();
+    }
+
     render() { 
         console.log(this.state.toggle);
         return ( 
@@ -32,9 +45,9 @@ class Nav extends Component {
 
 
                 <nav className={this.state.toggle ? 'show' : ''}>
-                    <ul className='navList'>
-                        <li className='navListItem'><Link to='/'>Home</Link></li>
-                        <li className='navListItem'><Link to='/projects'>Projects</Link></li>
+                    <ul ref={node => this.node = node} className='navList'>
+                        <li onClick={() => this.handleClickOutside()} className='navListItem'><Link to='/'>Home</Link></li>
+                        <li onClick={() => this.handleClickOutside()} className='navListItem'><Link to='/projects'>Projects</Link></li>
                         <li className='socialLinkParent'>
                             <ul id='navListItemSocial'>Social
                                 <li className='socialLinkImage'><a href='https://github.com/JacobTBralish'><i className="fab fa-github-square"></i></a></li>
