@@ -1,192 +1,191 @@
 $offBlack: #494c4e;
-$reactBlue: #61DAFB;
+$reactBlue: #61dafb;
 
 .slider {
-    position: relative;
-    width: 1000px;
-    margin: 0 auto;
-    height: 800px;
-    overflow: hidden;
-    white-space: nowrap;
-    @media(max-width: 1050px){
-        height: 600px;
-        width: 800px;
-        @media(max-width: 850px){
-            height: 400px;
-            width: 650px;
-            min-height: 350px;
-            min-width: 450px;
-            @media(max-width: 690px){
-                height: 400px;
-                width: 550px;
-                min-height: 250px;
-                min-width: 350px;
-                @media(max-width: 580px){
-                    height: 300px;
-                    width: 450px;
-                    min-height: 250px;
-                    min-width: 350px;
-                    @media(max-width: 480px){
-                        height: 250px;
-                        width: 375px;
-                        min-height: 200px;
-                        min-width: 300px;
-                        @media(max-width: 414px){
-                            height: 200px;
-                            width: 325px;
-                            min-height: 200px;
-                            min-width: 300px;
-                        }
-                    }
-                }
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+  height: 800px;
+  overflow: hidden;
+  white-space: nowrap;
+  @media (max-width: 1050px) {
+    height: 600px;
+    width: 800px;
+    @media (max-width: 850px) {
+      height: 400px;
+      width: 650px;
+      min-height: 350px;
+      min-width: 450px;
+      @media (max-width: 690px) {
+        height: 400px;
+        width: 550px;
+        min-height: 250px;
+        min-width: 350px;
+        @media (max-width: 580px) {
+          height: 300px;
+          width: 450px;
+          min-height: 250px;
+          min-width: 350px;
+          @media (max-width: 480px) {
+            height: 250px;
+            width: 375px;
+            min-height: 200px;
+            min-width: 300px;
+            @media (max-width: 414px) {
+              height: 200px;
+              width: 325px;
+              min-height: 200px;
+              min-width: 300px;
             }
+          }
         }
+      }
     }
   }
-  
-  .slider-wrapper {
-    position: relative;
-    height: 100%;
-    width: 100%;
-  }
-  
-  .slide {
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    min-height: 650px;
-    min-width: 900px;
-    background-size: cover;
-    @media(max-width: 1050px){
-        min-height: 500px;
-        min-width: 700px;
-        @media(max-width: 850px){
-            min-height: 400px;
-            min-width: 450px;
-            background-size: 450px 350px;
-            @media(max-width: 690px){
-                min-height: 350px;
-                min-width: 350px;
-                background-size: 350px 250px;
-                @media(max-width: 580px){
-                    min-height: 300px;
-                    min-width: 300px;
-                    background-size: 300px 200px;
-                    @media(max-width: 480px){
-                        min-height: 250px;
-                        min-width: 275px;
-                        background-size: 250px 150px;
-                        @media(max-width: 414px){
-                            min-height: 200px;
-                            min-width: 225px;
-                            background-size: 250px 150px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-  }
-  
-  .arrow {
-    height: 50px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #f9f9f9;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform ease-in .1s;
-    @media(max-width: 850px){
-        height: 40px;
-        width: 40px;
-        font-size: 15px;
-        @media(max-width: 690px){
-            height: 35px;
-            width: 35px;
-            font-size: 14px;
-            @media(max-width: 580px){
-                height: 30px;
-                width: 30px;
-                font-size: 13px;
-                @media(max-width: 480px){
-                    height: 25px;
-                    width: 25px;
-                    font-size: 12px;
-                    @media(max-width: 414px){
-                        height: 20px;
-                        width: 20px;
-                        font-size: 11px;
-                    }
-                }
-            }
-        }
-    }
-  }
-  
-  .nextArrow {
-    position: absolute;
-    top: 50%;
-    right: 25px;
-    z-index: 999;
-    color: #fff;
-  }
-  
-  .backArrow {
-    position: absolute;
-    top: 50%;
-    left: 25px;
-    z-index: 999;
-    color: #fff;
-  }
-  
-  .fa-arrow-right:before, .fa-arrow-left:before {
-    color: #222
-  }
-
-  .projectViewContainer {
-    padding-top: 6em;
-    padding-bottom: 1em;
-    border-top: 1px solid #f0eeee;
-    padding-left: 2em;
-    padding-right: 2em;
-    font-family: 'adriane', Georgia, serif;
-    @media(max-width: 414px){
-        padding-left: 0em;
-        padding-right: 0em;
-    }
-
-    
-    .titleLink {
-        font-size: 34px;
-        color: $offBlack;
-        text-align: center;
-        text-decoration: none;
-        
-        &:hover {
-            color: $reactBlue;
-        }
-    }
-    
-    .projectViewSubContainer {
-        padding-top: 3em;
-        padding-bottom: 1em;
-        
-        > a:hover {
-            color: $reactBlue;
-        }
-        .projectBody {
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            color: $offBlack;
-            -webkit-font-smoothing: antialiased;
-            padding-left: 2em;
-            padding-right: 2em;
-        }
-    }
 }
-  
+
+.slider-wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  min-height: 650px;
+  min-width: 900px;
+  background-size: cover;
+  @media (max-width: 1050px) {
+    min-height: 500px;
+    min-width: 700px;
+    @media (max-width: 850px) {
+      min-height: 400px;
+      min-width: 450px;
+      background-size: 450px 350px;
+      @media (max-width: 690px) {
+        min-height: 350px;
+        min-width: 350px;
+        background-size: 350px 250px;
+        @media (max-width: 580px) {
+          min-height: 300px;
+          min-width: 300px;
+          background-size: 300px 200px;
+          @media (max-width: 480px) {
+            min-height: 250px;
+            min-width: 275px;
+            background-size: 250px 150px;
+            @media (max-width: 414px) {
+              min-height: 200px;
+              min-width: 225px;
+              background-size: 250px 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.arrow {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in 0.1s;
+  @media (max-width: 850px) {
+    height: 40px;
+    width: 40px;
+    font-size: 15px;
+    @media (max-width: 690px) {
+      height: 35px;
+      width: 35px;
+      font-size: 14px;
+      @media (max-width: 580px) {
+        height: 30px;
+        width: 30px;
+        font-size: 13px;
+        @media (max-width: 480px) {
+          height: 25px;
+          width: 25px;
+          font-size: 12px;
+          @media (max-width: 414px) {
+            height: 20px;
+            width: 20px;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.nextArrow {
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  z-index: 999;
+  color: #fff;
+}
+
+.backArrow {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  z-index: 999;
+  color: #fff;
+}
+
+.fa-arrow-right:before,
+.fa-arrow-left:before {
+  color: #222;
+}
+
+.projectViewContainer {
+  padding-top: 6em;
+  padding-bottom: 1em;
+  border-top: 1px solid #f0eeee;
+  padding-left: 2em;
+  padding-right: 2em;
+  font-family: "adriane", Georgia, serif;
+  @media (max-width: 414px) {
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+
+  .titleLink {
+    font-size: 34px;
+    color: $offBlack;
+    text-align: center;
+    text-decoration: none;
+
+    &:hover {
+      color: $reactBlue;
+    }
+  }
+
+  .projectViewSubContainer {
+    padding-top: 3em;
+    padding-bottom: 1em;
+
+    > a:hover {
+      color: $reactBlue;
+    }
+    .projectBody {
+      display: block;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      color: $offBlack;
+      -webkit-font-smoothing: antialiased;
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+  }
+}
